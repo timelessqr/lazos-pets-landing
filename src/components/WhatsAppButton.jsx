@@ -1,9 +1,10 @@
-// src/components/WhatsAppButton3.jsx
+// src/components/WhatsAppButton.jsx
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { contact } from '../config/site';
 
-const WhatsAppButton3 = () => {
-  const whatsappUrl = "https://wa.me/56933783343";
+const WhatsAppButton = () => {
+  const whatsappUrl = contact.whatsapp;
 
   return (
     <div className="fixed bottom-5 right-5 z-50">
@@ -21,4 +22,4 @@ const WhatsAppButton3 = () => {
   );
 };
 
-export default WhatsAppButton3;
+export default WhatsAppButton;

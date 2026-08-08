@@ -10,21 +10,14 @@ import {
 } from "react-icons/fa";
 // Eliminada la importación de FaXTwitter
 import logoImage from '../assets/images/derecho.png'; // Importación del logo de vuelta
+import { brand, contact, social } from '../config/site';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // URL WhatsApp con el enlace proporcionado por el cliente (asumiendo que es el mismo del footer)
-  const whatsappUrl = "https://wa.me/56933783343";
-
-  // Links de redes sociales (usando los mismos del footer para consistencia, puedes ajustarlos si son diferentes para la navbar)
-  const socialLinks = {
-    facebook: "https://www.facebook.com/qr_lazosdevida",
-    instagram: "https://www.instagram.com/qr_lazosdevida",
-    tiktok: "https://www.tiktok.com/@qr_lazosdevida",
-    // Eliminado el link de twitter
-  };
+  const whatsappUrl = contact.whatsapp;
+  const socialLinks = social;
 
   // Definimos la animación del logo para el efecto hover con mayor escala (escritorio)
   const logoHoverAnimation = {
@@ -101,7 +94,7 @@ const Navbar = () => {
                   >
                     <img
                       src={logoImage}
-                      alt="Lazos de Vida"
+                      alt={brand.name}
                       className="w-full h-full object-contain transition-all duration-300"
                       style={{ transform: 'scale(2.5)' }} // Escala del logo
                     />
@@ -152,7 +145,7 @@ const Navbar = () => {
                 >
                   <img
                     src={logoImage}
-                    alt="Lazos de Vida"
+                    alt={brand.name}
                     className="w-full h-full object-contain transition-all duration-300"
                     style={{ transform: 'scale(3.0)' }} // Escala del logo
                   />

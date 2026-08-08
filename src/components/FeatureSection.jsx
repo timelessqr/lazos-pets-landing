@@ -32,12 +32,12 @@ const FeatureSection = () => {
     {
       icon: "heart",
       title: "Acceso inmediato a recuerdos digitales",
-      description: "Accede instantáneamente y de forma duradera a los recuerdos digitales de tus seres queridos."
+      description: "Accede instantáneamente y de forma duradera a los recuerdos digitales de tu mascota."
     },
     {
       icon: "edit",
       title: "Personalización de homenajes",
-      description: "Crea un homenaje personalizado único, reflejando fielmente la personalidad y pasiones de tus seres queridos."
+      description: "Crea un homenaje personalizado único, que refleje fielmente su carácter, sus juegos y las manías que la hacían única."
     },
     {
       icon: "tablet",
@@ -98,7 +98,7 @@ const FeatureSection = () => {
           <h2 className="text-4xl font-bold text-blue-600 mb-4">Nuestras Características</h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Descubre por qué nuestros códigos QR conmemorativos son la elección perfecta para honrar la memoria de tus seres queridos.
+            Descubre por qué nuestros códigos QR conmemorativos son la elección perfecta para honrar la memoria de tu mascota.
           </p>
         </div>
         

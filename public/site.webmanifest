@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Lazos de Vida Pets",
+  "short_name": "Lazos Pets",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

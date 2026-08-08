@@ -8,6 +8,7 @@ import {
   FaVolumeMute,
   FaWhatsapp
 } from 'react-icons/fa';
+import { brand, contact, media } from '../config/site';
 
 // Solo mantenemos las sombras de texto que no podemos hacer con Tailwind
 const textShadowStyles = `
@@ -21,9 +22,8 @@ const textShadowStyles = `
 
 const Hero = () => {
   
-  const videoUrl = "https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/WhatsApp%20Video%202026-07-29%20at%2020.56.49.mp4";
-  // URL WhatsApp con mensaje predefinido
-  const whatsappUrl = "https://wa.me/56933783343";
+  const videoUrl = media.heroVideo;
+  const whatsappUrl = contact.whatsapp;
 
   const videoRef = useRef(null);
   const [isMutedByUser, setIsMutedByUser] = useState(true);
@@ -96,7 +96,7 @@ const Hero = () => {
             loop
             playsInline
             className="w-full h-full object-cover"
-            poster="/images/headstone-qr.jpeg"
+            poster={media.heroPoster || undefined}
             src={videoUrl}
           >
             Tu navegador no soporta videos HTML5.
@@ -136,10 +136,10 @@ const Hero = () => {
         >
           {/* Título con fuente Lora */}
           <h1 className="text-4xl md:text-6xl font-lora font-semibold mb-6 text-shadow-lg leading-tight">Mantén Viva Su Memoria Con Nuestros Códigos QR</h1>
-          
+
           {/* Subtítulo con fuente Lora */}
           <p className="text-xl mb-8 text-shadow-md font-lora">
-            Lazos de Vida transforma la manera de honrar a tus seres queridos. Cada código QR es una puerta digital a sus recuerdos, historias y momentos más preciados.
+            {brand.name} transforma la manera de honrar a tu mascota. Cada código QR es una puerta digital a sus fotos, sus videos y los momentos que compartieron.
           </p>
 
           {/* Botones CTA - SOLO DOS BOTONES */}
@@ -154,7 +154,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
             >
               <FaWhatsapp className="mr-2" />
-              <span className="mr-2 text-base">Crea Tu Lazo de Vida</span>
+              <span className="mr-2 text-base">Crea Su Lazo de Vida</span>
               <Motion.span
                 animate={{ x: [0, 4, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5, repeatType: "loop" }}

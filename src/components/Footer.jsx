@@ -7,20 +7,14 @@ import {
   FaWhatsapp
 } from 'react-icons/fa';
 import logoImage from '../assets/images/derecho.png';
+import { brand, contact, social, paymentLogos } from '../config/site';
 
 const Footer = () => {
   // Estado para controlar cuál modal está abierto (null si ninguno está abierto)
   const [activeModal, setActiveModal] = useState(null);
 
-  // URL WhatsApp actualizada con el link del cliente
-  const whatsappUrl = "https://wa.me/56933783343";
-
-  // Links de redes sociales
-  const socialLinks = {
-    facebook: "https://www.facebook.com/qr_lazosdevida",
-    instagram: "https://www.instagram.com/qr_lazosdevida",
-    tiktok: "https://www.tiktok.com/@qr_lazosdevida"
-  };
+  const whatsappUrl = contact.whatsapp;
+  const socialLinks = social;
 
   // Estado para manejar el desplegable de secciones en móvil
   const [openSection, setOpenSection] = useState(null);
@@ -38,15 +32,15 @@ const Footer = () => {
   const modalContent = {
     quienesSomos: {
       title: "Quiénes Somos",
-      content: "Somos una empresa dedicada a la producción y desarrollo de biografías, historias y recuerdos plasmados digitalmente con el escaneo de código QR. Nos dedicamos a construir memorias de seres queridos que no están en presencia física hoy, pero en los corazones de sus familiares y amigos perduran lazos y recuerdos que los unen. Es por eso que, a través de la impresión de una placa QR, los familiares podrán conectar por medio de recuerdos e historias de una forma digital con sus seres queridos fallecidos y mantener viva su historia."
+      content: "Somos una empresa dedicada a la producción y desarrollo de historias y recuerdos de mascotas, plasmados digitalmente y accesibles con el escaneo de un código QR. Nos dedicamos a construir la memoria de esos compañeros que ya no están en presencia física, pero que dejaron una huella imborrable en la familia que los quiso. Es por eso que, a través de la impresión de una placa QR, las familias pueden volver a conectar de forma digital con las fotos, los videos y la historia de su mascota, y mantenerla viva."
     },
     mision: {
       title: "Misión",
-      content: "Brindar la mejor experiencia digital a través del desarrollo de historias, recuerdos y biografías, diseñando un producto de alta calidad, una historia plasmada digitalmente que pueda honrar y dejar un recuerdo imborrable en los corazones de todas las familias que perdieron un ser querido, revivir recuerdos e inspirar a través de historias."
+      content: "Brindar la mejor experiencia digital a través del desarrollo de historias y recuerdos de mascotas, diseñando un producto de alta calidad, una historia plasmada digitalmente que pueda honrar y dejar un recuerdo imborrable en los corazones de todas las familias que perdieron a su compañero de vida."
     },
     vision: {
       title: "Visión",
-      content: "Llegar a todas las familias de Chile, dejar una huella imborrable en los corazones de las personas con recuerdos que marquen para siempre sus vidas, lograr a través de una placa QR DIGITAL PERSONALIZADA, el desarrollo de historias, sentimientos, expresiones y muestras de cariño de familiares y amigos cercanos."
+      content: "Llegar a todas las familias de Chile que compartieron su vida con una mascota, y lograr, a través de una placa QR DIGITAL PERSONALIZADA, que su historia, su cariño y los momentos vividos junto a ella queden guardados para siempre."
     },
     valores: {
       title: "Valores",
@@ -134,7 +128,7 @@ const Footer = () => {
         <div className="transform hover:scale-110 transition-transform duration-300">
           <img
             src={logoImage}
-            alt="Lazos de Vida"
+            alt={brand.name}
             className="h-40 md:h-80 object-contain font-lora"
           />
         </div>
@@ -223,7 +217,7 @@ const Footer = () => {
                 onClick={() => toggleSection('descubre')}
                 className="flex justify-between items-center w-full py-2 text-left font-semibold"
               >
-                <span className="text-lg text-gray-900">Sobre Lazos de Vida</span>
+                <span className="text-lg text-gray-900">Sobre {brand.shortName}</span>
                 <svg
                   className={`w-5 h-5 transition-transform ${openSection === 'descubre' ? 'transform rotate-180' : ''}`}
                   fill="none"
@@ -345,8 +339,8 @@ const Footer = () => {
                 <div className="space-y-2 py-2 pl-2">
                   <div className="flex items-center">
                     {/* Removido el icono SVG que causaba el caracter no deseado */}
-                    <a href="mailto:Lazosdevidaqr@gmail.com" className="text-gray-800 hover:text-blue-600 transition-colors">
-                      Lazosdevidaqr@gmail.com
+                    <a href={`mailto:${contact.email}`} className="text-gray-800 hover:text-blue-600 transition-colors">
+                      {contact.email}
                     </a>
                   </div>
                 </div>
@@ -438,7 +432,7 @@ const Footer = () => {
 
             {/* Enlaces rápidos */}
             <div className="md:col-span-1">
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">Sobre Lazos de Vida</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Sobre {brand.shortName}</h3>
               <ul className="space-y-2">
                 <li>
                   <a
@@ -517,8 +511,8 @@ const Footer = () => {
               <div className="space-y-2">
                 <div className="flex items-center">
                   {/* Removido el icono SVG que causaba el caracter no deseado */}
-                  <a href="mailto:Lazosdevidaqr@gmail.com" className="text-gray-800 hover:text-blue-600 transition-colors">
-                    Lazosdevidaqr@gmail.com
+                  <a href={`mailto:${contact.email}`} className="text-gray-800 hover:text-blue-600 transition-colors">
+                    {contact.email}
                   </a>
                 </div>
               </div>
@@ -590,7 +584,7 @@ const Footer = () => {
                 {/* Contenedores para imágenes con hover, padding y centrado */}
                 <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}>
                    <img
-                      src="https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/apple-pay-payment-mark-seeklogo.png" // URL de Apple Pay
+                      src={paymentLogos.applePay} // URL de Apple Pay
                       alt="Apple Pay"
                       className="object-contain"
                       style={{ width: 'auto', height: '26px' }} // Aumentado tamaño de la imagen
@@ -598,7 +592,7 @@ const Footer = () => {
                 </div>
                  <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}>
                    <img
-                      src="https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/visa-seeklogo.png" // URL de Visa
+                      src={paymentLogos.visa} // URL de Visa
                       alt="Visa"
                       className="object-contain"
                       style={{ width: 'auto', height: '35px' }} // Aumentado tamaño de la imagen
@@ -606,7 +600,7 @@ const Footer = () => {
                 </div>
                 <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}>
                    <img
-                      src="https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/mastercard-modern-design-.svg" // URL de Mastercard
+                      src={paymentLogos.mastercard} // URL de Mastercard
                       alt="Mastercard"
                       className="object-contain"
                       style={{ width: 'auto', height: '24px' }} // Aumentado tamaño de la imagen
@@ -614,7 +608,7 @@ const Footer = () => {
                 </div>
                  <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}>
                    <img
-                      src="https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/paypal-3.svg" // URL de PayPal
+                      src={paymentLogos.paypal} // URL de PayPal
                       alt="PayPal"
                       className="object-contain"
                       style={{ width: 'auto', height: '35px' }} // Aumentado tamaño de la imagen
@@ -623,7 +617,7 @@ const Footer = () => {
                 {/* American Express - Usando imagen */}
                 <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}> {/* Mismo tamaño de contenedor para consistencia */}
                    <img
-                      src="https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/american-express-seeklogo.png" // URL de American Express
+                      src={paymentLogos.amex} // URL de American Express
                       alt="American Express"
                       className="object-contain"
                       style={{ width: 'auto', height: '33px' }} // Mismo tamaño de imagen para consistencia
@@ -632,7 +626,7 @@ const Footer = () => {
                 {/* Mercado Pago - Usando imagen */}
                 <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}> {/* Mismo tamaño de contenedor para consistencia */}
                    <img
-                      src="https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/mercado-pago-seeklogo.png" // URL de Mercado Pago
+                      src={paymentLogos.mercadoPago} // URL de Mercado Pago
                       alt="Mercado Pago"
                       className="object-contain"
                       style={{ width: 'auto', height: '34px' }} // Mismo tamaño de imagen para consistencia
@@ -645,7 +639,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row justify-center md:justify-between items-center">
               <div className="text-center md:text-left mb-2 md:mb-0">
                 <p className="text-xs md:text-sm text-gray-800">
-                  &copy; {new Date().getFullYear()} Lazos de Vida. Todos los derechos reservados.
+                  &copy; {new Date().getFullYear()} {brand.name}. Todos los derechos reservados.
                 </p>
                 <p className="text-xs text-gray-500 mt-1">
                   Diseñado por <a href="https://bitsdeve.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 transition-colors">bitsdeve 🤖</a>

@@ -1,5 +1,6 @@
 // src/components/SplitSections.jsx - Con el id añadido para navegación
 import React from 'react';
+import { brand, media } from '../config/site';
 
 // Componente interno para cada sección
 const SplitSection = ({ 
@@ -48,19 +49,19 @@ const SplitSections = () => {
         media={
           <div className="flex justify-center">
             <div className="rounded-lg shadow-xl overflow-hidden w-64 h-64 aspect-square transform transition-transform duration-300 hover:scale-105">
-              <img 
-                src="https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/3a.jpeg"
-                alt="Código QR memorial" 
+              <img
+                src={media.splitPrimary}
+                alt="Código QR conmemorativo para mascotas"
                 className="w-full h-full object-cover object-top"
               />
             </div>
           </div>
         }
-        title="¡UN CÓDIGO QR EN MEMORIA DE TU SER QUERIDO!"
+        title="¡UN CÓDIGO QR EN MEMORIA DE TU MASCOTA!"
         description={
           <div>
-            <p className="mb-4">Imagina la posibilidad de mantener vivos los recuerdos de quienes amas a través de imágenes y videos que hablan de ellos...</p>
-            <p className="font-semibold">Hoy todo esto es posible con Lazos de Vida ♡</p>
+            <p className="mb-4">Imagina la posibilidad de mantener vivos los recuerdos de quien te acompañó cada día, a través de las imágenes y los videos que cuentan su historia...</p>
+            <p className="font-semibold">Hoy todo esto es posible con {brand.name} ♡</p>
           </div>
         }
       />
@@ -75,15 +76,11 @@ const SplitSections = () => {
             {/* Contenedor cuadrado de 60x60 */}
             <div className="rounded-lg overflow-hidden shadow-xl w-60 h-60 transform transition-transform duration-300 hover:scale-105">
               {/* Imagen con posicionamiento ajustado para mostrar más hacia abajo */}
-              <img 
-                src="https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/1a.jpeg"
-                alt="Código QR en uso" 
-                className="w-full h-full object-cover object-center" 
+              <img
+                src={media.splitSecondary}
+                alt="Código QR en uso"
+                className="w-full h-full object-cover object-center"
                 style={{ objectPosition: "center 25%" }} // Ajusta este valor para mover la imagen hacia abajo
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "https://via.placeholder.com/400x400?text=Lazos+de+Vida";
-                }}
               />
             </div>
           </div>
@@ -91,8 +88,8 @@ const SplitSections = () => {
         title="FÁCIL DE USAR, DIFÍCIL DE OLVIDAR"
         description={
           <div>
-            <p className="mb-4">Cada visita al cementerio se convertirá en un <strong>momento de conexión</strong> y reflexión, una forma de sentirse más cerca, aunque sea solo virtualmente.</p>
-            <p className="mb-4">En el perfil dedicado, siempre accesible, puedes insertar una <strong>biografía y dedicatorias</strong>, además de cargar <strong>fotos y videos</strong> 🕊️</p>
+            <p className="mb-4">Cada vez que vuelvas al lugar que elegiste para recordarla, un escaneo se convertirá en un <strong>momento de conexión</strong>, una forma de sentirla cerca otra vez.</p>
+            <p className="mb-4">En el perfil dedicado, siempre accesible, puedes escribir su <strong>historia y dedicatorias</strong>, además de cargar <strong>fotos y videos</strong> 🐾</p>
           </div>
         }
       />
