@@ -26,12 +26,13 @@ export const social = {
   tiktok: 'https://www.tiktok.com/@qr_lazosdevida',
 };
 
-// PENDIENTE: todo este bloque es material de memoriales de PERSONAS.
-// Reemplazar por video y fotos de mascotas subidos a un R2 propio.
+// Video del hero: material propio de mascotas.
+// PENDIENTE: splitPrimary y splitSecondary siguen siendo de memoriales de
+// PERSONAS. Reemplazar cuando esten las fotos de mascotas.
 export const media = {
-  heroVideo:
-    'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/WhatsApp%20Video%202026-07-29%20at%2020.56.49.mp4',
+  heroVideo: 'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/0808.mp4',
   // Imagen fija que se ve mientras carga el video. Vacio = sin poster.
+  // PENDIENTE: exportar un frame del video a JPG y subirlo.
   heroPoster: '',
   splitPrimary: 'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/3a.jpeg',
   splitSecondary: 'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/1a.jpeg',
