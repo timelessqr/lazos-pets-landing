@@ -26,16 +26,18 @@ export const social = {
   tiktok: 'https://www.tiktok.com/@qr_lazosdevida',
 };
 
-// Video del hero: material propio de mascotas.
-// PENDIENTE: splitPrimary y splitSecondary siguen siendo de memoriales de
-// PERSONAS. Reemplazar cuando esten las fotos de mascotas.
+// Material propio de mascotas.
+const r2 = 'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev';
+
 export const media = {
-  heroVideo: 'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/0808.mp4',
+  heroVideo: `${r2}/0808.mp4`,
   // Imagen fija que se ve mientras carga el video. Vacio = sin poster.
-  // PENDIENTE: exportar un frame del video a JPG y subirlo.
+  // PENDIENTE: subir el frame exportado y apuntarlo aca.
   heroPoster: '',
-  splitPrimary: 'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/3a.jpeg',
-  splitSecondary: 'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev/1a.jpeg',
+  // Rincon del recuerdo (placa + foto + vela).
+  splitPrimary: `${r2}/rincon.jpeg`,
+  // Escaneo de la placa con el telefono.
+  splitSecondary: `${r2}/escaneo.jpeg`,
 };
 
 // Logos de medios de pago: son marca-neutrales, sirven igual para este proyecto.
