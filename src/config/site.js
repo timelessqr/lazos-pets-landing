@@ -30,7 +30,10 @@ export const social = {
 const r2 = 'https://pub-aa35b927bb064c1e8c7e97ebdbbec0c1.r2.dev';
 
 export const media = {
-  heroVideo: `${r2}/0808.mp4`,
+  // Version con faststart (moov al inicio): empieza a reproducir sin esperar
+  // la descarga completa. No reemplazar por un MP4 exportado directo de
+  // CapCut sin volver a aplicarle `ffmpeg -c copy -movflags +faststart`.
+  heroVideo: `${r2}/0808-faststart.mp4`,
   // Imagen fija que se ve mientras carga el video. Vacio = sin poster.
   // PENDIENTE: subir el frame exportado y apuntarlo aca.
   heroPoster: '',
