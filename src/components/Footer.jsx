@@ -142,12 +142,15 @@ const Footer = () => {
             animation: wavyAnimation 6s ease-in-out infinite alternate;
           }
 
+          /* Las cuatro keyframes DEBEN tener los mismos comandos en el mismo
+             orden (M Q T V H Z). Si una difiere, CSS no puede interpolar y la
+             animacion salta de golpe en vez de morfear. */
           @keyframes wavyAnimation {
             0% {
               d: path("M0,20 Q300,45 600,15 T1200,20 V30 H0 Z");
             }
             33% {
-              d: path("M0,0 600,30 T1200,20 V30 H0 Z");
+              d: path("M0,12 Q300,32 600,28 T1200,14 V30 H0 Z");
             }
             66% {
               d: path("M0,15 Q300,35 600,5 T1200,15 V30 H0 Z");
