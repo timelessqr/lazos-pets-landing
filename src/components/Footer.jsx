@@ -208,7 +208,7 @@ const Footer = () => {
           }
         `}</style>
 
-        <div className="container mx-auto px-4 py-8 font-lora">
+        <div className="container mx-auto px-4 pt-8 pb-24 md:pb-8 font-lora">
           {/* Versión móvil */}
           <div className="md:hidden">
             {/* Espaciador para el logo */}
@@ -585,7 +585,7 @@ const Footer = () => {
               {/* Ajustado el espacio entre logos (space-x-2 en lugar de space-x-3/5) y tamaño de contenedores/imágenes */}
               <div className="flex space-x-2 md:space-x-3">
                 {/* Contenedores para imágenes con hover, padding y centrado */}
-                <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}>
+                <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: 'clamp(40px, 12vw, 55px)', height: '40px' }}>
                    <img
                       src={paymentLogos.applePay} // URL de Apple Pay
                       alt="Apple Pay"
@@ -593,7 +593,7 @@ const Footer = () => {
                       style={{ width: 'auto', height: '26px' }} // Aumentado tamaño de la imagen
                    />
                 </div>
-                 <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}>
+                 <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: 'clamp(40px, 12vw, 55px)', height: '40px' }}>
                    <img
                       src={paymentLogos.visa} // URL de Visa
                       alt="Visa"
@@ -601,7 +601,7 @@ const Footer = () => {
                       style={{ width: 'auto', height: '35px' }} // Aumentado tamaño de la imagen
                    />
                 </div>
-                <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}>
+                <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: 'clamp(40px, 12vw, 55px)', height: '40px' }}>
                    <img
                       src={paymentLogos.mastercard} // URL de Mastercard
                       alt="Mastercard"
@@ -609,7 +609,7 @@ const Footer = () => {
                       style={{ width: 'auto', height: '24px' }} // Aumentado tamaño de la imagen
                    />
                 </div>
-                 <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}>
+                 <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: 'clamp(40px, 12vw, 55px)', height: '40px' }}>
                    <img
                       src={paymentLogos.paypal} // URL de PayPal
                       alt="PayPal"
@@ -618,7 +618,7 @@ const Footer = () => {
                    />
                 </div>
                 {/* American Express - Usando imagen */}
-                <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}> {/* Mismo tamaño de contenedor para consistencia */}
+                <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: 'clamp(40px, 12vw, 55px)', height: '40px' }}> {/* Mismo tamaño de contenedor para consistencia */}
                    <img
                       src={paymentLogos.amex} // URL de American Express
                       alt="American Express"
@@ -627,7 +627,7 @@ const Footer = () => {
                    />
                 </div>
                 {/* Mercado Pago - Usando imagen */}
-                <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: '55px', height: '40px' }}> {/* Mismo tamaño de contenedor para consistencia */}
+                <div className="hover:scale-110 hover:shadow-md transition-all duration-300 rounded bg-white p-0.5 flex items-center justify-center" style={{ width: 'clamp(40px, 12vw, 55px)', height: '40px' }}> {/* Mismo tamaño de contenedor para consistencia */}
                    <img
                       src={paymentLogos.mercadoPago} // URL de Mercado Pago
                       alt="Mercado Pago"
